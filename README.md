@@ -15,6 +15,18 @@ conda env create -f environment.yml
 ```
 
 Please be noted, that the above environment is specifically used to run ```MOSA-Net_Cross_Domain.py, Generate_PS_Feature.py, Generate_end2end_Feature.py```. To generate Self Supervised Learning (SSL) feature, please use ```python 3.6``` and follow the instructions in following <a href="https://github.com/pytorch/fairseq" target="_blank">link</a> to deploy fairseq module.  
+#### Installing fairseq ####
+This program doesn't run on latest fairseq release. You have to install from the submodule in this repository.
+
+1. initialize submodule
+```
+git submodule init
+```
+2. install fairseq
+```
+cd fairseq-lib
+pip install --editable ./
+```
 ### Feature Extaction ###
 
 For extracting cross-domain features, please use Generate_end2end_Feature.py, Generate_PS_Feature.py, Generate_SSL_Feature.py. When extracting SSL feature, please make sure that fairseq can be imported correctly. Please refer to this link for detail <a href="https://github.com/pytorch/fairseq" target="_blank">installation</a>. 
