@@ -18,9 +18,10 @@ Please be noted, that the above environment is specifically used to run ```MOSA-
 #### Installing fairseq ####
 This program doesn't run on latest fairseq release. You have to install from the submodule in this repository.
 
-1. initialize submodule
+1. initialize submodule and clone fairseq
 ```
 git submodule init
+git submodule update
 ```
 2. install fairseq
 ```
